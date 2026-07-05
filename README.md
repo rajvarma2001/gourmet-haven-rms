@@ -1,3 +1,5 @@
+![Gourmet Haven Banner](frontend/src/assets/gourmet_haven_banner.png)
+
 # 🍽️ Gourmet Haven - Restaurant Management System (RMS)
 
 Gourmet Haven is a modern, premium full-stack food ordering and restaurant management platform. Designed for both customer ordering and comprehensive administrative back-office management, the application offers a premium user interface with a seamless light/dark mode theme selector, interactive cart/checkout flows, order progress tracking, and robust sales analytics.
