@@ -586,13 +586,15 @@ button, input, select, textarea {
 
 /* Print CSS Stylesheet */
 @media print {
-  body > div:not(.invoice-print-overlay) {
-    display: none !important;
-  }
-  
   body {
+    visibility: hidden;
     background: white !important;
     color: black !important;
+  }
+  
+  .invoice-print-overlay,
+  .invoice-print-overlay * {
+    visibility: visible;
   }
 
   .invoice-print-overlay {
