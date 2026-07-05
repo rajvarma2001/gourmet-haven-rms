@@ -387,7 +387,7 @@ const Admin = () => {
               <div className="analytic-icon-box orange"><DollarSign size={22} /></div>
               <div className="analytic-info">
                 <span className="analytic-label">Total Revenue</span>
-                <h2 className="analytic-value">${analytics ? analytics.totalSales.toFixed(2) : '0.00'}</h2>
+                <h2 className="analytic-value">₹{analytics ? analytics.totalSales.toFixed(2) : '0.00'}</h2>
               </div>
             </div>
 
@@ -403,7 +403,7 @@ const Admin = () => {
               <div className="analytic-icon-box blue"><TrendingUp size={22} /></div>
               <div className="analytic-info">
                 <span className="analytic-label">Average Order</span>
-                <h2 className="analytic-value">${analytics ? analytics.avgOrderValue.toFixed(2) : '0.00'}</h2>
+                <h2 className="analytic-value">₹{analytics ? analytics.avgOrderValue.toFixed(2) : '0.00'}</h2>
               </div>
             </div>
 
@@ -522,7 +522,7 @@ const Admin = () => {
                           </div>
                           <div className="recent-order-body">
                             <span className="recent-order-user">{order.userName}</span>
-                            <span className="recent-order-total">${order.totalAmount.toFixed(2)}</span>
+                            <span className="recent-order-total">₹{order.totalAmount.toFixed(2)}</span>
                           </div>
                           <div className="recent-order-footer">
                             <span className={`badge badge-${order.status.toLowerCase().replace(/ /g, '-')}`}>{order.status}</span>
@@ -603,7 +603,7 @@ const Admin = () => {
                               ))}
                             </div>
                           </td>
-                          <td><strong className="tbl-total-val">${order.totalAmount.toFixed(2)}</strong></td>
+                          <td><strong className="tbl-total-val">₹{order.totalAmount.toFixed(2)}</strong></td>
                           <td>
                             <select
                               className={`status-select select-${order.status.toLowerCase().replace(/ /g, '-')}`}
@@ -678,7 +678,7 @@ const Admin = () => {
                         </div>
                         <h4 className="admin-menu-row-title">{item.name}</h4>
                         <p className="admin-menu-row-desc">{item.description}</p>
-                        <span className="admin-menu-row-price">${item.price.toFixed(2)}</span>
+                        <span className="admin-menu-row-price">₹{item.price.toFixed(2)}</span>
                       </div>
                       <div className="admin-menu-row-actions">
                         {/* Instant Stock Toggle */}
@@ -889,9 +889,9 @@ const Admin = () => {
                                   <span className="invoice-item-name">{item.name}</span>
                                 </div>
                               </td>
-                              <td className="text-right">${item.price.toFixed(2)}</td>
+                              <td className="text-right">₹{item.price.toFixed(2)}</td>
                               <td className="text-center">{item.quantity}</td>
-                              <td className="text-right">${(item.price * item.quantity).toFixed(2)}</td>
+                              <td className="text-right">₹{(item.price * item.quantity).toFixed(2)}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -907,26 +907,26 @@ const Admin = () => {
                       <div className="invoice-summary-col summary-right">
                         <div className="summary-row">
                           <span>Subtotal</span>
-                          <span>${subtotal.toFixed(2)}</span>
+                          <span>₹{subtotal.toFixed(2)}</span>
                         </div>
                         <div className="summary-row">
                           <span>GST / Tax (5%)</span>
-                          <span>${tax.toFixed(2)}</span>
+                          <span>₹{tax.toFixed(2)}</span>
                         </div>
                         <div className="summary-row">
                           <span>Delivery Fee</span>
-                          <span>{deliveryFee > 0 ? `$${deliveryFee.toFixed(2)}` : 'FREE'}</span>
+                          <span>{deliveryFee > 0 ? `₹${deliveryFee.toFixed(2)}` : 'FREE'}</span>
                         </div>
                         {discount > 0 && (
                           <div className="summary-row discount-row">
                             <span>Promo Discount</span>
-                            <span>-${discount.toFixed(2)}</span>
+                            <span>-₹{discount.toFixed(2)}</span>
                           </div>
                         )}
                         <hr className="summary-divider" />
                         <div className="summary-row grand-total-row">
                           <span>Grand Total</span>
-                          <span>${selectedOrder.totalAmount.toFixed(2)}</span>
+                          <span>₹{selectedOrder.totalAmount.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>
@@ -1016,7 +1016,7 @@ const Admin = () => {
 
                   <div className="form-grid">
                     <div className="form-group">
-                      <label className="form-label" htmlFor="itemPrice">Price ($)</label>
+                      <label className="form-label" htmlFor="itemPrice">Price (₹)</label>
                       <input
                         id="itemPrice"
                         type="number"

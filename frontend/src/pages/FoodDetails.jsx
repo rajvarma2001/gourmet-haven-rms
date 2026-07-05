@@ -159,7 +159,7 @@ const FoodDetails = () => {
             </div>
           </div>
 
-          <div className="details-price">${food.price.toFixed(2)}</div>
+          <div className="details-price">₹{food.price.toFixed(2)}</div>
           <p className="details-desc">{food.description}</p>
 
           <div className="details-meta-list">

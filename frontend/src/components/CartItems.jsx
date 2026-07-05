@@ -23,7 +23,7 @@ const CartItems = () => {
           <div className="cart-item-details">
             <h4 className="cart-item-name">{item.name}</h4>
             <p className="cart-item-category">{item.category}</p>
-            <span className="cart-item-unit-price">${item.price.toFixed(2)}</span>
+            <span className="cart-item-unit-price">₹{item.price.toFixed(2)}</span>
           </div>
 
           {/* Item Quantity Controller */}
@@ -47,7 +47,7 @@ const CartItems = () => {
 
           {/* Item Subtotal Price */}
           <div className="cart-item-subtotal">
-            ${(item.price * item.quantity).toFixed(2)}
+            ₹{(item.price * item.quantity).toFixed(2)}
           </div>
 
           {/* Delete Action Button */}

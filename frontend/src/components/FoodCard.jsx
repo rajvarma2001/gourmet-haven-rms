@@ -48,7 +48,7 @@ const FoodCard = ({ food }) => {
         
         {/* Footer actions */}
         <div className="food-card-footer">
-          <span className="food-card-price">${food.price.toFixed(2)}</span>
+          <span className="food-card-price">₹{food.price.toFixed(2)}</span>
           
           {food.isAvailable && (
             <div className="food-card-actions">

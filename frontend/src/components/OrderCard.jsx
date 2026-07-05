@@ -85,7 +85,7 @@ const OrderCard = ({ order }) => {
               <span className="item-qty-name">
                 <strong className="item-qty">{item.quantity}x</strong> {item.name}
               </span>
-              <span className="item-price-calc">${(item.price * item.quantity).toFixed(2)}</span>
+              <span className="item-price-calc">₹{(item.price * item.quantity).toFixed(2)}</span>
             </div>
           ))}
         </div>
@@ -111,7 +111,7 @@ const OrderCard = ({ order }) => {
       <div className="order-card-footer">
         <div className="footer-price-group">
           <span className="footer-label">Total Amount</span>
-          <span className="footer-total">${order.totalAmount.toFixed(2)}</span>
+          <span className="footer-total">₹{order.totalAmount.toFixed(2)}</span>
         </div>
         <button className="btn btn-secondary btn-sm invoice-btn" onClick={() => setShowInvoice(true)}>
           View Invoice
@@ -193,9 +193,9 @@ const OrderCard = ({ order }) => {
                             <span className="invoice-item-name">{item.name}</span>
                           </div>
                         </td>
-                        <td className="text-right">${item.price.toFixed(2)}</td>
+                        <td className="text-right">₹{item.price.toFixed(2)}</td>
                         <td className="text-center">{item.quantity}</td>
-                        <td className="text-right">${(item.price * item.quantity).toFixed(2)}</td>
+                        <td className="text-right">₹{(item.price * item.quantity).toFixed(2)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -211,26 +211,26 @@ const OrderCard = ({ order }) => {
                 <div className="invoice-summary-col summary-right">
                   <div className="summary-row">
                     <span>Subtotal</span>
-                    <span>${breakdown.subtotal.toFixed(2)}</span>
+                    <span>₹{breakdown.subtotal.toFixed(2)}</span>
                   </div>
                   <div className="summary-row">
                     <span>GST / Tax (5%)</span>
-                    <span>${breakdown.tax.toFixed(2)}</span>
+                    <span>₹{breakdown.tax.toFixed(2)}</span>
                   </div>
                   <div className="summary-row">
                     <span>Delivery Fee</span>
-                    <span>{breakdown.deliveryFee > 0 ? `$${breakdown.deliveryFee.toFixed(2)}` : 'FREE'}</span>
+                    <span>{breakdown.deliveryFee > 0 ? `₹${breakdown.deliveryFee.toFixed(2)}` : 'FREE'}</span>
                   </div>
                   {breakdown.discount > 0 && (
                     <div className="summary-row discount-row">
                       <span>Promo Discount</span>
-                      <span>-${breakdown.discount.toFixed(2)}</span>
+                      <span>-₹{breakdown.discount.toFixed(2)}</span>
                     </div>
                   )}
                   <hr className="summary-divider" />
                   <div className="summary-row grand-total-row">
                     <span>Grand Total</span>
-                    <span>${breakdown.total.toFixed(2)}</span>
+                    <span>₹{breakdown.total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>

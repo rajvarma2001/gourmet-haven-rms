@@ -99,26 +99,26 @@ const Cart = () => {
               <div className="summary-details">
                 <div className="summary-row">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>₹{subtotal.toFixed(2)}</span>
                 </div>
                 {discountAmount > 0 && (
                   <div className="summary-row discount-row animate-fade-in">
                     <span>Discount</span>
-                    <span>-${discountAmount.toFixed(2)}</span>
+                    <span>-₹{discountAmount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="summary-row">
                   <span>Estimated Tax (5%)</span>
-                  <span>${tax.toFixed(2)}</span>
+                  <span>₹{tax.toFixed(2)}</span>
                 </div>
                 <div className="summary-row">
                   <span>Delivery Fee</span>
-                  <span>{deliveryFee > 0 ? `$${deliveryFee.toFixed(2)}` : 'FREE'}</span>
+                  <span>{deliveryFee > 0 ? `₹${deliveryFee.toFixed(2)}` : 'FREE'}</span>
                 </div>
                 
                 {deliveryFee > 0 && (
                   <p className="delivery-free-notice">
-                    Add <strong>${(40 - subtotal).toFixed(2)}</strong> more to get free delivery!
+                    Add <strong>₹{(40 - subtotal).toFixed(2)}</strong> more to get free delivery!
                   </p>
                 )}
 
@@ -126,7 +126,7 @@ const Cart = () => {
                 
                 <div className="summary-row total-row">
                   <span>Total</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₹{total.toFixed(2)}</span>
                 </div>
               </div>
 

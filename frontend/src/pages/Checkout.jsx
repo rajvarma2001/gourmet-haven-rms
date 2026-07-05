@@ -106,7 +106,7 @@ const Checkout = () => {
             </div>
             <div className="success-detail-row">
               <span>Total Paid:</span>
-              <strong className="success-amount">${placedOrder.totalAmount.toFixed(2)}</strong>
+              <strong className="success-amount">₹{placedOrder.totalAmount.toFixed(2)}</strong>
             </div>
             <div className="success-detail-row">
               <span>Delivery Address:</span>
@@ -237,7 +237,7 @@ const Checkout = () => {
             </div>
 
             <button type="submit" className="btn btn-primary submit-checkout-btn" disabled={submitting}>
-              {submitting ? 'Placing Order...' : `Place Order • $${total.toFixed(2)}`}
+              {submitting ? 'Placing Order...' : `Place Order • ₹${total.toFixed(2)}`}
             </button>
           </form>
         </div>
@@ -252,7 +252,7 @@ const Checkout = () => {
                   <span className="mini-item-name">
                     <strong className="mini-item-qty">{item.quantity}x</strong> {item.name}
                   </span>
-                  <span className="mini-item-price">${(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="mini-item-price">₹{(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
             </div>
@@ -261,7 +261,7 @@ const Checkout = () => {
 
             <div className="mini-summary-total">
               <span>Total Amount</span>
-              <span className="mini-total-val">${total.toFixed(2)}</span>
+              <span className="mini-total-val">₹{total.toFixed(2)}</span>
             </div>
           </div>
         </div>
