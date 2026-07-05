@@ -587,14 +587,44 @@ button, input, select, textarea {
 /* Print CSS Stylesheet */
 @media print {
   body {
-    visibility: hidden;
     background: white !important;
     color: black !important;
   }
-  
-  .invoice-print-overlay,
-  .invoice-print-overlay * {
-    visibility: visible;
+
+  /* Hide everything in the body except the React root container */
+  body > *:not(#root) {
+    display: none !important;
+  }
+
+  /* Hide all siblings of app-container */
+  #root > *:not(.app-container) {
+    display: none !important;
+  }
+
+  /* Hide navbar and footer */
+  .navbar,
+  .app-footer {
+    display: none !important;
+  }
+
+  /* Hide other active page wrappers if they don't contain the print overlay */
+  .main-content > *:not(:has(.invoice-print-overlay)) {
+    display: none !important;
+  }
+
+  /* In Admin page, hide everything except the print overlay itself */
+  .admin-page > *:not(.invoice-print-overlay) {
+    display: none !important;
+  }
+
+  /* In Orders page, hide all other order cards */
+  .orders-page .order-card:not(:has(.invoice-print-overlay)) {
+    display: none !important;
+  }
+
+  /* Inside the active order card, hide everything except the print overlay itself */
+  .orders-page .order-card:has(.invoice-print-overlay) > *:not(.invoice-print-overlay) {
+    display: none !important;
   }
 
   .invoice-print-overlay {
