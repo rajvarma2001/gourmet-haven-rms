@@ -6,6 +6,19 @@ Gourmet Haven is a modern, premium full-stack food ordering and restaurant manag
 
 ---
 
+## 📸 Application Screenshots
+
+### 🏠 Customer Storefront Landing Page
+![Gourmet Haven Home Page](frontend/src/assets/gourmet_haven_home.png)
+
+### 🍕 Interactive Food Menu Catalog
+![Gourmet Haven Menu Page](frontend/src/assets/gourmet_haven_menu.png)
+
+### 📊 Back-Office Administration Dashboard
+![Gourmet Haven Admin Panel](frontend/src/assets/gourmet_haven_admin.png)
+
+---
+
 ## 🚀 Key Features
 
 ### 🛒 Customer Storefront
