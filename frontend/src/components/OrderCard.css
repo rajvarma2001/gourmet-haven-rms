@@ -11,6 +11,11 @@
   transition: var(--transition);
 }
 
+.order-card:has(.invoice-print-overlay) {
+  position: relative;
+  z-index: 1050 !important; /* Lift active modal card above other cards */
+}
+
 .order-card:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--text-light);
